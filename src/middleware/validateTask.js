@@ -18,3 +18,12 @@ export const validateTask = [
 
   checkValidationResults,
 ];
+
+export const validateTaskQuery = [
+  body('id')
+    .isInt({ min: 1 })
+    .withMessage('ID must be a number'),
+
+  checkValidationResults,
+
+];
