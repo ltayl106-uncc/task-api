@@ -7,7 +7,7 @@ export async function findAll() {
 
 // Find a singular task
 export async function findOne(id){
-  return prisma.task.findUnique({
+  return await prisma.task.findUnique({
     where: { id },
     select: {
       id: true,
